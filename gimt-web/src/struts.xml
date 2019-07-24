@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+		"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.devMode" value="true" />
+
+    <package name="default" extends="struts-default">
+    
+        <action name="loginAction" class="edu.gimt.controller.LoginAction" method="execute">
+            <result name="success">/index.jsp</result>
+            <result name="error">/login.jsp</result>
+        </action>
+		
+        <action name="searchAction" class="edu.gimt.controller.SearchAction" method="execute">
+            <result name="success">/index.jsp</result>
+            <result name="error">/login.jsp</result>
+        </action>
+		
+        <action name="logoutAction" class="edu.gimt.controller.LogoutAction" method="execute">
+            <result name="success">/login.jsp</result>
+        </action>
+        
+        <action name="showDiagnostic">
+        	<result>/diagnostic.jsp</result>
+		</action>
+		
+        <action name="diagnosticAction" class="edu.gimt.controller.DiagnosticAction" method="execute">
+            <result name="success">/diagnostic.jsp</result>
+            <result name="error">/login.jsp</result>
+        </action>
+        
+        <action name="showDownloadFile" class="edu.gimt.controller.ShowDownloadFileAction" method="execute">
+            <result name="success">/downloadFile.jsp</result>
+            <result name="error">/login.jsp</result>
+        </action>
+        
+        <action name="downloadFile" class="edu.gimt.controller.DownloadFileAction">
+            <result name="success" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="inputName">inputStream</param>
+                <param name="contentDisposition">attachment;filename="${fileName}"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+		
+    </package>
+</struts>
