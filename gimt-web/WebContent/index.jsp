@@ -86,14 +86,14 @@
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<!-- Maps API -->		
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDb1FOretqxZHHWlBPjuEMXgVHIP6AG1k&libraries=visualization"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=idUserMapsAPI&libraries=visualization"></script>
 		<!-- DateTimePicker -->
 		<script src="./js/moment-with-locales.min.js"></script>
 		<link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 		<script src="./js/bootstrap-datetimepicker.min.js"></script>
 		<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
 		<meta name="google-signin-scope" content="profile email">
-		<meta name="google-signin-client_id" content="1051037700045-ibeuv0apliff5qem557abkunqbilh230.apps.googleusercontent.com">
+		<meta name="google-signin-client_id" content="idClientSignIn.apps.googleusercontent.com">
 
 		<style>
 			select {
